@@ -1,0 +1,28 @@
+{
+  "name": "umi-antd-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomi-li/umi-antd-tools.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomi-li/umi-antd-tools/issues"
+  },
+  "homepage": "https://github.com/tomi-li/umi-antd-tools#readme",
+  "dependencies": {
+    "antd": "^3.22.0",
+    "dva": "^2.4.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "umi": "^2.8.18"
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../../layouts/theme/vars';
+
+.sort-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #9c9c9c;
+  padding: 0 10px;
+  height: 2.4em;
+  margin-right: 4px;
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+
+  &.empty {
+    .asc, .desc {
+      color: #92c8f5;
+    }
+  }
+
+  &.state-asc {
+    .desc {
+      color: @text-color-secondary;
+    }
+  }
+
+  &.state-desc {
+    .asc {
+      color: @text-color-secondary;
+    }
+  }
+
+  &.state-asc,
+  &.state-desc {
+    border-color: @primary-color;
+    color: @primary-color;
+  }
+
+  .icons-wrapper {
+    height: 24px;
+    margin-left: 4px;
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
