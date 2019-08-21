@@ -2,9 +2,19 @@
   "name": "umi-antd-tools",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && npm run build:dist && npm run build:core && npm run build:example",
+    "build:example": "rimraf docs && webpack --progress --config webpack.example.js",
+    "build:dist": "webpack --progress --config webpack.config.js",
+    "build:core": "webpack --progress --config webpack.core.config.js",
+    "build&publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -24,5 +34,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "umi": "^2.8.18"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   }
 }
